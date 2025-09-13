@@ -16,11 +16,12 @@ main()
     double *array = nullptr; // Pointer to hold the address of the dynamic array
     array = new double[ARRAYSIZE]; // Dynamically allocates memory for the array
 
-    enterArrayData(array);
-    outputArrayData(array);
+    enterArrayData(array); // Populates the array with user input
+    outputArrayData(array); // Displays the array contents
 
-    double sum = sumArray(array);
-    cout << "Sum of Values: " << sum << endl;
+    double sum = sumArray(array); // Calculates the sum of the array elements
+    cout << "Sum of Values: " << sum << endl; // Displays the sum
+    cout << endl;
 
     delete[] array;  // Free the dynamically allocated memory
 
@@ -32,10 +33,11 @@ void enterArrayData(double* array)
 {
     const int ARRAYSIZE = 5;
 
+    cout << endl;
     cout << "Data entry for the array: " << endl;
-    for (int i = 0; i < ARRAYSIZE; i++)
+    for (int i = 0; i < ARRAYSIZE; i++) // Loops through each element of the array starting from 0.
     {
-        cout << "     > Element " << (i + 1) << ": ";
+        cout << "     > Element #" << (i + 0) << ": ";
         cin >> array[i];
     }
     cout << "Data entry complete." << endl;
